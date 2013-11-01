@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MySampleApplication/MySampleApplication.iml" filepath="$PROJECT_DIR$/MySampleApplication/MySampleApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyWebViewApplication/MyWebViewApplication.iml" filepath="$PROJECT_DIR$/MyWebViewApplication/MyWebViewApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyWebViewApplicationProject.iml" filepath="$PROJECT_DIR$/MyWebViewApplicationProject.iml" />
+    </modules>
+  </component>
+</project>
+
