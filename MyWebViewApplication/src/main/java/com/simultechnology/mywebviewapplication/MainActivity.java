@@ -1,7 +1,6 @@
 package com.simultechnology.mywebviewapplication;
 
 import android.app.Activity;
-import android.app.ActionBar;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,10 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
 public class MainActivity extends Activity {
 
@@ -24,12 +21,14 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         mWebView = (WebView) findViewById(R.id.activity_main_window);
-        mWebView.setWebViewClient(new WebViewClient());
 
         WebSettings settings = mWebView.getSettings();
         settings.setJavaScriptEnabled(true);
 
         mWebView.loadUrl("http://www.html5rocks.com");
+        //mWebView.loadUrl("http://www.yahoo.co.jp");
+
+        mWebView.setWebViewClient(new MyWebViewClient());
 
 //        if (savedInstanceState == null) {
 //            getFragmentManager().beginTransaction()
