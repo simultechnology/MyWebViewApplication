@@ -25,10 +25,11 @@ public class MainActivity extends Activity {
         WebSettings settings = mWebView.getSettings();
         settings.setJavaScriptEnabled(true);
 
-        mWebView.loadUrl("http://www.html5rocks.com");
-        //mWebView.loadUrl("http://www.yahoo.co.jp");
+        //mWebView.loadUrl("http://www.html5rocks.com");
+        mWebView.loadUrl("file:///android_asset/www/index.html");
 
         mWebView.setWebViewClient(new MyWebViewClient());
+        mWebView.addJavascriptInterface(new WebAppInterface(this), "Android");
 
 //        if (savedInstanceState == null) {
 //            getFragmentManager().beginTransaction()
@@ -37,6 +38,15 @@ public class MainActivity extends Activity {
 //        }
     }
 
+    @Override
+    public void onBackPressed() {
+        if (mWebView.canGoBack()) {
+            mWebView.goBack();
+        }
+        else {
+            super.onBackPressed();
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
